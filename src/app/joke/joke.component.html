@@ -1,0 +1,10 @@
+<div
+class="card"
+*ngFor="let joke of jokes">
+<div class="card-body" >
+  <h1 class="card-title">{{joke.setup}}</h1>
+  <h4 [hidden]="joke.hide" class="card-text">{{joke.punchline}}</h4>
+    <!-- <button (click)="toggle(joke)" class="btn btn-primary">Tell me</button> -->
+    <button (click)="joke.toggle()" class="btn btn-primary">Tell me</button>
+</div>
+</div>
